@@ -28,7 +28,6 @@ A College Management System developed using Python and SQLite for managing stude
 * Marks.py - Marks management
 * Fees.py - Fee management
 * Report.py - Report generation
-* college.db - SQLite database file
 
 ## Technologies Used
 
