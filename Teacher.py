@@ -19,7 +19,7 @@ def create_teacher_table(cursor, conn):
 
 def teacher_page(cursor, conn):
 
-    st.header("👨‍🏫 Teacher Management")
+    st.header("Teacher Management")
 
     option = st.selectbox(
         "Select Option",
@@ -30,9 +30,6 @@ def teacher_page(cursor, conn):
         ]
     )
 
-    # =====================================
-    # ADD TEACHER
-    # =====================================
 
     if option == "Add Teacher":
 
@@ -87,10 +84,6 @@ def teacher_page(cursor, conn):
                     "Teacher ID Already Exists"
                 )
 
-    # =====================================
-    # VIEW TEACHERS
-    # =====================================
-
     elif option == "View Teachers":
 
         query = """
@@ -107,9 +100,6 @@ def teacher_page(cursor, conn):
             use_container_width=True
         )
 
-    # =====================================
-    # DELETE TEACHER
-    # =====================================
 
     elif option == "Delete Teacher":
 
