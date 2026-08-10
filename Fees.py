@@ -28,10 +28,6 @@ def fees_page(cursor, conn):
         ]
     )
 
-    # =========================
-    # ADD FEES
-    # =========================
-
     if option == "Add Fee Record":
 
         student_id = st.number_input(
@@ -76,9 +72,6 @@ def fees_page(cursor, conn):
                 "Fee Record Saved"
             )
 
-    # =========================
-    # VIEW FEES
-    # =========================
 
     elif option == "View Fees":
 
