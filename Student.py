@@ -20,7 +20,7 @@ def create_student_table(cursor, conn):
 
 def student_page(cursor, conn):
 
-    st.header("🎓 Student Management")
+    st.header("Student Management")
 
     option = st.selectbox(
         "Select Option",
@@ -31,7 +31,7 @@ def student_page(cursor, conn):
         ]
     )
 
-    # ADD STUDENT
+    
     if option == "Add Student":
 
         sid = st.number_input(
@@ -92,7 +92,7 @@ def student_page(cursor, conn):
                     "Student ID Already Exists"
                 )
 
-    # VIEW STUDENTS
+    
     elif option == "View Students":
 
         df = pd.read_sql_query(
@@ -107,7 +107,7 @@ def student_page(cursor, conn):
             use_container_width=True
         )
 
-    # DELETE STUDENT
+    
     elif option == "Delete Student":
 
         sid = st.number_input(
