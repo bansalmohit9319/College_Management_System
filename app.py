@@ -11,18 +11,12 @@ from Report import reports_page
 from Password import change_password_page
 from Login import login_page
 
-# ==========================
-# PAGE CONFIG
-# ==========================
 
 st.set_page_config(
     page_title="College Management System",
     layout="wide"
 )
 
-# ==========================
-# DATABASE CONNECTION
-# ==========================
 
 conn = sqlite3.connect(
     "college.db",
@@ -31,9 +25,6 @@ conn = sqlite3.connect(
 
 cursor = conn.cursor()
 
-# ==========================
-# USERS TABLE
-# ==========================
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS users(
@@ -45,9 +36,6 @@ CREATE TABLE IF NOT EXISTS users(
 
 conn.commit()
 
-# ==========================
-# CREATE ALL TABLES
-# ==========================
 
 create_student_table(cursor, conn)
 create_teacher_table(cursor, conn)
@@ -55,15 +43,9 @@ create_attendance_table(cursor, conn)
 create_marks_table(cursor, conn)
 create_fees_table(cursor, conn)
 
-# ==========================
-# TITLE
-# ==========================
 
 st.title("🎓 College Management System")
 
-# ==========================
-# MENU
-# ==========================
 
 menu = st.sidebar.selectbox(
     "Select Module",
@@ -80,9 +62,6 @@ menu = st.sidebar.selectbox(
     ]
 )
 
-# ==========================
-# ROUTING
-# ==========================
 
 if menu == "Dashboard":
     dashboard_page(cursor, conn)
