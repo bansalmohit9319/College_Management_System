@@ -10,7 +10,7 @@ def login_page(
 ):
 
     st.title(
-        "🎓 College Management System"
+        "College Management System"
     )
 
     st.subheader(
