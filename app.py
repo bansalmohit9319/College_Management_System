@@ -1,6 +1,5 @@
 import streamlit as st
 import sqlite3
-
 from Student import create_student_table, student_page
 from Teacher import create_teacher_table, teacher_page
 from Attendance import create_attendance_table, attendance_page
