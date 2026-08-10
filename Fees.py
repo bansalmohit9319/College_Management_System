@@ -18,7 +18,7 @@ def create_fees_table(cursor, conn):
 
 def fees_page(cursor, conn):
 
-    st.header("💰 Fees Management")
+    st.header("Fees Management")
 
     option = st.selectbox(
         "Select Option",
