@@ -1,20 +1,11 @@
 import hashlib
 
-
-# ==========================
-# HASH PASSWORD
-# ==========================
-
 def hash_password(password):
 
     return hashlib.sha256(
         password.encode()
     ).hexdigest()
 
-
-# ==========================
-# VERIFY PASSWORD
-# ==========================
 
 def verify_password(
     input_password,
