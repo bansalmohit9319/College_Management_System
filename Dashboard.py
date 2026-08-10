@@ -57,7 +57,7 @@ def dashboard_page(cursor, conn):
     st.divider()
 
     st.subheader(
-        "📋 Recent Students"
+        "Recent Students"
     )
 
     df = pd.read_sql_query(
