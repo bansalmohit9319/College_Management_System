@@ -4,11 +4,7 @@ import pandas as pd
 
 def dashboard_page(cursor, conn):
 
-    st.title("📊 College Dashboard")
-
-    # ==========================
-    # TOTAL STUDENTS
-    # ==========================
+    st.title("College Dashboard")
 
     cursor.execute(
         "SELECT COUNT(*) FROM students"
@@ -16,19 +12,11 @@ def dashboard_page(cursor, conn):
 
     total_students = cursor.fetchone()[0]
 
-    # ==========================
-    # TOTAL TEACHERS
-    # ==========================
-
     cursor.execute(
         "SELECT COUNT(*) FROM teachers"
     )
 
     total_teachers = cursor.fetchone()[0]
-
-    # ==========================
-    # TOTAL FEES
-    # ==========================
 
     cursor.execute(
         "SELECT SUM(paid_fee) FROM fees"
@@ -42,9 +30,6 @@ def dashboard_page(cursor, conn):
         else 0
     )
 
-    # ==========================
-    # DASHBOARD CARDS
-    # ==========================
 
     col1, col2, col3 = st.columns(3)
 
