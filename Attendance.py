@@ -26,7 +26,7 @@ def attendance_page(
 ):
 
     st.header(
-        "📅 Attendance Management"
+        "Attendance Management"
     )
 
     option = st.selectbox(
@@ -37,9 +37,6 @@ def attendance_page(
         ]
     )
 
-    # =====================================
-    # MARK ATTENDANCE
-    # =====================================
 
     if option == "Mark Attendance":
 
@@ -87,10 +84,6 @@ def attendance_page(
             st.success(
                 "Attendance Saved Successfully"
             )
-
-    # =====================================
-    # VIEW ATTENDANCE
-    # =====================================
 
     elif option == "View Attendance":
 
