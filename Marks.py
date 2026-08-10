@@ -18,7 +18,7 @@ def create_marks_table(cursor, conn):
 
 def marks_page(cursor, conn):
 
-    st.header("📝 Marks Management")
+    st.header("Marks Management")
 
     option = st.selectbox(
         "Select Option",
@@ -29,9 +29,6 @@ def marks_page(cursor, conn):
         ]
     )
 
-    # =========================
-    # ADD MARKS
-    # =========================
 
     if option == "Add Marks":
 
@@ -75,9 +72,6 @@ def marks_page(cursor, conn):
                 "Marks Saved Successfully"
             )
 
-    # =========================
-    # VIEW MARKS
-    # =========================
 
     elif option == "View Marks":
 
@@ -93,9 +87,6 @@ def marks_page(cursor, conn):
             use_container_width=True
         )
 
-    # =========================
-    # DELETE MARKS
-    # =========================
 
     elif option == "Delete Marks":
 
