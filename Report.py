@@ -5,7 +5,7 @@ import pandas as pd
 def reports_page(conn):
 
     st.header(
-        "📄 Reports Export"
+        "Reports Export"
     )
 
     report_type = st.selectbox(
@@ -19,9 +19,6 @@ def reports_page(conn):
         ]
     )
 
-    # ==========================
-    # STUDENTS REPORT
-    # ==========================
 
     if report_type == "Students":
 
@@ -30,9 +27,6 @@ def reports_page(conn):
             conn
         )
 
-    # ==========================
-    # TEACHERS REPORT
-    # ==========================
 
     elif report_type == "Teachers":
 
@@ -41,9 +35,6 @@ def reports_page(conn):
             conn
         )
 
-    # ==========================
-    # ATTENDANCE REPORT
-    # ==========================
 
     elif report_type == "Attendance":
 
@@ -52,9 +43,6 @@ def reports_page(conn):
             conn
         )
 
-    # ==========================
-    # MARKS REPORT
-    # ==========================
 
     elif report_type == "Marks":
 
@@ -63,9 +51,6 @@ def reports_page(conn):
             conn
         )
 
-    # ==========================
-    # FEES REPORT
-    # ==========================
 
     elif report_type == "Fees":
 
