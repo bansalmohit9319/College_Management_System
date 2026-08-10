@@ -1,5 +1,4 @@
 import streamlit as st
-
 from Security import (
     change_password
 )
@@ -11,7 +10,7 @@ def change_password_page(
 ):
 
     st.header(
-        "🔒 Change Password"
+        "Change Password"
     )
 
     username = st.text_input(
